@@ -13,14 +13,15 @@ fun getAllSessionsOfInstructor(ctx: ApiContext) {
 
     val myInt = ctx.req.params["myInt"]!!.toInt()
 
-    ctx.logger.debug("get session of instructor $myInt")
+    ctx.logger.debug("request for $myInt received")
 
-    try {
+
         myCoroutine.launch {
             ctx.logger.debug("int is $myInt")
             ctx.res.setBodyText(myInt.toString())
+            ctx.logger.debug("response sent")
         }
-    } catch (e: Exception) {
-        ctx.logger.debug(e.message?:"no error message")
-    }
+
+
+
 }
