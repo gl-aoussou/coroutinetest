@@ -16,12 +16,20 @@ fun getAllSessionsOfInstructor(ctx: ApiContext) {
     ctx.logger.debug("request for $myInt received")
 
 
-        myCoroutine.launch {
+
             ctx.logger.debug("int is $myInt")
             ctx.res.setBodyText(myInt.toString())
             ctx.logger.debug("response sent")
-        }
 
 
 
+}
+
+
+@Api(routeOverride = "mylist")
+fun listTodos(ctx: ApiContext) {
+
+
+    ctx.res.setBodyText("response")
+    ctx.logger.debug("response sent")
 }
