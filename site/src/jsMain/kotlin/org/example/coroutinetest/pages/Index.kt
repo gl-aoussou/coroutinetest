@@ -2,6 +2,8 @@ package org.example.coroutinetest.pages
 
 import androidx.compose.runtime.*
 import com.varabyte.kobweb.core.Page
+import org.example.coroutinetest.MyClass
+import org.example.coroutinetest.getInt
 import org.jetbrains.compose.web.css.*
 import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.Text
@@ -9,16 +11,16 @@ import org.jetbrains.compose.web.dom.Text
 @Page
 @Composable
 fun HomePage() {
-    // TODO: Replace the following with your own content
-    Div(attrs = {
-        style {
-            display(DisplayStyle.Flex)
-            width(100.percent)
-            height(100.vh)
-            alignItems(AlignItems.Center)
-            justifyContent(JustifyContent.Center)
-        }
-    }) {
-       Text("THIS PAGE INTENTIONALLY LEFT BLANK")
+
+//    val myClass = MyClass()
+//    val state = myClass.state.collectAsState()
+
+//    Text(value = state.value.displayInt.toString())
+
+
+    LaunchedEffect(key1 = Unit){
+        println("TEST")
+        getInt()
     }
+
 }
