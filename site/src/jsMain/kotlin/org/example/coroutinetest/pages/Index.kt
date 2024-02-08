@@ -12,10 +12,10 @@ import org.jetbrains.compose.web.dom.Text
 @Composable
 fun HomePage() {
 
-//    val myClass = MyClass()
-//    val state = myClass.state.collectAsState()
+    val myClass = MyClass()
+    val state = myClass.state.collectAsState()
 
-//    Text(value = state.value.displayInt.toString())
+    Text(value = state.value.displayInt.toString())
 
 
     LaunchedEffect(key1 = Unit){
